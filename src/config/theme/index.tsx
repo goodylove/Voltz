@@ -1,20 +1,41 @@
 'use client';
 import { createTheme } from '@mui/material/styles';
 
-
+declare module "@mui/material/styles" {
+  interface Theme {
+    custom: {
+      customShadow1: string;
+      customShadow2: string;
+    };
+  }
+  // allow configuration using `createTheme`
+  interface ThemeOptions {
+    custom?: {
+      customShadow1?: string;
+      customShadow2?: string;
+    };
+  }
+}
 
 const theme = createTheme({
-  cssVariables: true,
+  // cssVariables: true,
+  custom: {
+    customShadow1:
+      "drop-shadow(0px 0px 10px #FF4AA9) drop-shadow(0px 0px 16px #FF4AA9) drop-shadow(0px 0px 40px rgba(255, 74, 169, 0.8))",
+    customShadow2:
+      "drop-shadow(0px 8px 28px rgba(255, 74, 169, 0.2)) drop-shadow(0px 18px 88px rgba(255, 74, 169, 0.3))",
+  },
   palette: {
     mode: 'dark',
     primary: {
      main:'#b85488',
      light: "#FF4AA9",
-     contrastText:"#2667ff"
+     contrastText:"#2667ff",
     },
     secondary: {
-    main:'#00556d',
-     light: "#4de5ff",
+      main:'#00556d',
+      light: "#4de5ff",
+      dark:'#1c1927'
 
     },
     text:{
@@ -29,6 +50,24 @@ const theme = createTheme({
   },
   typography: {
     fontFamily:['Pixel Operator Mono','sans-serif'].join(','),
+    body2:{
+      fontSize:16,
+      letterSpacing:"1px"
+    },
+    body1:{
+      fontSize:14,
+      letterSpacing:"1.1px"
+    },
+    h4:{
+      fontSize:28,
+      fontWeight:"bold",
+      letterSpacing:"1.5px"
+    },
+    h5:{
+      fontSize:32,
+      fontWeight:"bold",
+      letterSpacing:"1.5px"
+    }
    
   },
 //   components: {
