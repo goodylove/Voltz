@@ -13,10 +13,10 @@ export default function Home() {
   return (
     <Box >
       <NavBar/>
-      {/* <Section1/>
-      <Section2/> */}
+      <Section1/>
+      <Section2/>
 
-      {/* <Footer/> */}
+      <Footer/>
     </Box>
   );
 }
