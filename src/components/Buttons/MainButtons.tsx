@@ -8,6 +8,15 @@ const  MainButtons:React.FC<ButtonProps> = ({ children, size="normal",sx={} })=>
     
     fontSize:size ==="small" ?14:16,
     fontWeight:"bold",
+    ":hover":{
+      bgcolor:'secondary.dark',
+    
+      filter: theme.custom.customShadow2,
+      border:"1px solid #3b2c34",
+      color:"primary.main",
+  
+  
+  },
 
     
     })}>
