@@ -58,7 +58,7 @@ function Section2() {
       <Stack alignItems="center"  justifyContent="center" sx={{height:'100%'}}>
    <Image src="/logo-full.svg"  height={250} width={1000} alt='logo' objectFit='contain'/>
    <Typography variant='h5' sx={{mt:-10,mb:5}}>THE INTEREST RATE SWAP AMM</Typography>
-   <MainButtons>PRESS FOR ALPHA</MainButtons>
+   <MainButtons >PRESS FOR ALPHA</MainButtons>
       <NeoBox sx={{opacity:1-scrollPosition/600,
         transform:`translate3d(-32px,8px,0px) scale3d(${0.0065 *scrollPosition +1},${0.0065*scrollPosition +1} ,1) rotateX(0deg) rotateY(0deg) rotateZ(${-0.215 * scrollPosition -163}deg) skew(0deg,0deg)`
       }}/>
